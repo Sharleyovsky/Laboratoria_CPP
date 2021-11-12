@@ -5,6 +5,7 @@ using namespace std;
 long long getFactorial(int number) {
     if(number < 0) {
         cout << "Number can't be lower than 0!" << endl;
+        return 0;
     }
 
     if(number < 2) {

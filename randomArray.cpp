@@ -1,6 +1,5 @@
 //Laboratoria 13.11.2021
 #include <iostream>
-#include <vector>
 
 using namespace std;
 

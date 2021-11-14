@@ -35,8 +35,7 @@ void printExistingNumbers(int min, int max, int vectorSize) {
 }
 
 int main() {
-    int min{0}, max{0};
-    int vectorSize{0};
+    int min{0}, max{0}, vectorSize{0};
 
     cout << "Enter vector size:";
     cin >> vectorSize;

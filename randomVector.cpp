@@ -40,7 +40,6 @@ int main() {
 
     cout << "Enter vector size:";
     cin >> vectorSize;
-
     cout << "Enter minimal value:";
     cin >> min;
     cout << "Enter maximal value:";

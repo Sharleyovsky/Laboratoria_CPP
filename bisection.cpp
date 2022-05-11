@@ -10,7 +10,7 @@ void fillArray(int *arr, int size) {
     }
 }
 
-void measureFunctionTime(int *arr, int left, int right, int number, function<int(int*, int, int, int)> callback) {
+void measureFunctionTime(int *arr, int left, int right, int number, const function<int(int*, int, int, int)>& callback) {
     time_t begin, end;
     time(&begin);
     int output = callback(arr, left, right, number);

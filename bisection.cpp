@@ -13,7 +13,7 @@ void fillArray(int *arr, int size) {
 
 int findNumber(int *arr, int left, int right, int number) {
     if(left > right) {
-        cout << "The number you were looking doesn't exist in this array!" << endl;
+        cout << "The number you were looking for doesn't exist in this array!" << endl;
         return 0;
     }
 

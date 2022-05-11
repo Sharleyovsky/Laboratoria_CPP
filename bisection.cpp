@@ -22,7 +22,7 @@ void measureFunctionTime(int *arr, int left, int right, int number, function<int
 
 int findNumber(int *arr, int left, int right, int number) {
     if(left > right) {
-        cout << "Nie znaleziono danej liczby!" << endl;
+        cout << "The number you were looking doesn't exist in this array!" << endl;
         return 0;
     }
 

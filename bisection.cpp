@@ -14,8 +14,8 @@ void fillArray(int *arr, int size) {
 void measureFunctionTime(int *arr, int left, int right, int number, const function<int(int*, int, int, int)>& callback) {
     auto start = chrono::high_resolution_clock::now();
     int output = callback(arr, left, right, number);
-    cout << "Output: " << output << endl;
     auto finish = chrono::high_resolution_clock::now();
+    cout << "Output: " << output << endl;
     cout << chrono::duration_cast<chrono::microseconds>(finish-start).count() << "microseconds\n";
 }
 

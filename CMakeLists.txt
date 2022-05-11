@@ -11,3 +11,5 @@ add_executable(RandomArray_LAB2
 
 add_executable(RandomVector_LAB2
         randomVector.cpp)
+
+add_executable(BisectionMethod bisection.cpp)

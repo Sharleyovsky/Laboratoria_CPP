@@ -20,9 +20,6 @@ void measureFunctionTime(int *arr, int left, int right, int number, function<int
     printf("Time measured: %lld seconds.\n", elapsed);
 }
 
-// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-// 0 + 9 = 9 // 2 = 4
-
 int findNumber(int *arr, int left, int right, int number) {
     if(left > right) {
         cout << "Nie znaleziono danej liczby!" << endl;

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <functional>
+#include <chrono>
 
 using namespace std;
 
@@ -11,13 +12,11 @@ void fillArray(int *arr, int size) {
 }
 
 void measureFunctionTime(int *arr, int left, int right, int number, const function<int(int*, int, int, int)>& callback) {
-    time_t begin, end;
-    time(&begin);
+    auto start = chrono::high_resolution_clock::now();
     int output = callback(arr, left, right, number);
     cout << "Output: " << output << endl;
-    time(&end);
-    time_t elapsed = end - begin;
-    printf("Time measured: %lld seconds.\n", elapsed);
+    auto finish = chrono::high_resolution_clock::now();
+    cout << chrono::duration_cast<chrono::microseconds>(finish-start).count() << "microseconds\n";
 }
 
 int findNumber(int *arr, int left, int right, int number) {

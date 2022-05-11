@@ -11,14 +11,6 @@ void fillArray(int *arr, int size) {
     }
 }
 
-void measureFunctionTime(int *arr, int left, int right, int number, const function<int(int*, int, int, int)>& callback) {
-    auto start = chrono::high_resolution_clock::now();
-    int output = callback(arr, left, right, number);
-    auto finish = chrono::high_resolution_clock::now();
-    cout << "Output: " << output << endl;
-    cout << chrono::duration_cast<chrono::microseconds>(finish-start).count() << "microseconds\n";
-}
-
 int findNumber(int *arr, int left, int right, int number) {
     if(left > right) {
         cout << "The number you were looking doesn't exist in this array!" << endl;
@@ -38,6 +30,14 @@ int findNumber(int *arr, int left, int right, int number) {
 
     right = mid - 1;
     return findNumber(arr, left, right, number);
+}
+
+void measureFunctionTime(int *arr, int left, int right, int number, const function<int(int*, int, int, int)>& callback) {
+    auto start = chrono::high_resolution_clock::now();
+    int output = callback(arr, left, right, number);
+    auto finish = chrono::high_resolution_clock::now();
+    cout << "Output: " << output << endl;
+    cout << chrono::duration_cast<chrono::microseconds>(finish-start).count() << "microseconds\n";
 }
 
 int main() {

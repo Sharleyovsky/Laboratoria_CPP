@@ -37,7 +37,7 @@ void measureFunctionTime(int *arr, int left, int right, int number, const functi
     int output = callback(arr, left, right, number);
     auto finish = chrono::high_resolution_clock::now();
     cout << "Output: " << output << endl;
-    cout << chrono::duration_cast<chrono::microseconds>(finish-start).count() << "microseconds\n";
+    cout << chrono::duration_cast<chrono::nanoseconds>(finish-start).count() << "nanoseconds\n";
 }
 
 int main() {

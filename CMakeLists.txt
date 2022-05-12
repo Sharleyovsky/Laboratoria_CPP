@@ -13,3 +13,5 @@ add_executable(RandomVector_LAB2
         randomVector.cpp)
 
 add_executable(BisectionMethod bisection.cpp)
+
+add_executable(BubbleSort bubble-sort.cpp)
